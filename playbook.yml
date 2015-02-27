@@ -16,7 +16,9 @@
 #
 
 - hosts: all
-  accelerate: true
-  user: root
+  accelerate: false
+  vars:
+      grub_conf: "/boot/grub/grub.cfg"
+      os_packager: apt
   roles:
     - cis 
